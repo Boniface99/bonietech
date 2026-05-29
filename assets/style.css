@@ -43,26 +43,55 @@ main {
 
 /* Navigation bar - full width with background, fits screen properly */
 nav {
-  width: 140%;
+  /* Fix: Make it exactly the width of the screen without overflowing */
+  width: 100%;
   display: flex;
-  margin-left: -270px;
-  justify-content: space-between;
-
-  padding: 20px 150px;
+  justify-content: center; /* Centers the inner container */
+  align-items: center;
+  
+  /* Fix: Changed large horizontal padding to vertical-only padding */
+  padding: 20px 0; 
+  
   background: linear-gradient(135deg, rgba(5, 10, 20, 0.95) 0%, rgba(8, 15, 25, 0.98) 100%);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 224, 255, 0.25);
   position: sticky;
   top: 0;
   z-index: 100;
-  gap: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 224, 255, 0.1);
+  
+  /* Removed: margin-left: -270px (caused severe misalignment) */
 }
 
-/* Make nav container full width without extra margins */
 nav .container {
-  padding: 0;
-  max-width: 200%;
+  /* Fix: Width constraints for a clean look on wide laptop/desktop screens */
+  width: 100%;
+  max-width: 1200px; 
+  
+  /* Fix: Handles the actual spacing and distribution of your links/logo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  
+  /* Adds safe breathing room on the left and right sides */
+  padding: 0 30px; 
+  margin: 0 auto; /* Keeps the container perfectly centered */
+}
+
+/* --- Mobile & Tablet Tweaks --- */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 0; /* Slightly slimmer navbar on phones */
+  }
+  
+  nav .container {
+    padding: 0 15px; /* Less side-padding on small screens to save space */
+    
+    /* Optional: If your menu links crowd the logo on mobile, 
+       uncomment the line below to stack them vertically instead */
+    /* flex-direction: column; gap: 10px; */
+  }
 }
 
 /* Optional: Add a subtle glow effect to nav bar */
