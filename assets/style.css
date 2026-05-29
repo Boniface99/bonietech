@@ -47,7 +47,7 @@ nav {
   display: flex;
   margin-left: -270px;
   justify-content: space-between;
-  align-items: center;
+
   padding: 20px 150px;
   background: linear-gradient(135deg, rgba(5, 10, 20, 0.95) 0%, rgba(8, 15, 25, 0.98) 100%);
   backdrop-filter: blur(10px);
