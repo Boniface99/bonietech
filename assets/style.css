@@ -15,10 +15,7 @@ body {background: linear-gradient(135deg, rgba(70, 70, 72, 0.95) 100%, rgba(236,
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 10;
-  padding: 10;
-  width: 100%;
-  overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+ 
 }
 }
 
