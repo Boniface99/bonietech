@@ -949,4 +949,84 @@ footer .container {
       .glowing-orb { width: 240px; height: 240px; }
       .image-overlay { width: 180px; height: 180px; }
     }
+/* --- GLOBAL BODY SECTION FIX --- */
+
+/* 1. Target the main content area of your pages */
+main, 
+section, 
+.main-content {
+  width: 90%;          /* Forces a natural 5% margin space on the left and right */
+  max-width: 1300px;   /* Matches the clean horizontal boundaries of your navbar */
+  margin: 0 auto;      /* Perfectly centers the content on laptop and desktop screens */
+  padding: 60px 0;     /* Adds uniform spacing below your sticky navbar and above your footer */
+  box-sizing: border-box;
+}
+
+/* 2. Fix the layout grid for your home/hero pages globally */
+.hero-section, 
+.home-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;           /* Ensures a clean, safe gap between text elements and images */
+}
+
+/* --- MOBILE & TABLET ADJUSTMENTS --- */
+@media (max-width: 992px) {
+  main, 
+  section, 
+  .main-content {
+    width: 92%;        /* Gives a little extra room for text on smaller screens */
+    padding: 40px 0;   /* Adjusts vertical spacing smoothly for mobile devices */
+  }
+  
+  /* Automatically stacks side-by-side elements vertically on phones */
+  .hero-section, 
+  .home-section {
+    flex-direction: column-reverse; 
+    text-align: center;
+    gap: 35px;
+  }
+}
+/* --- GLOBAL BODY SECTION FIX --- */
+
+/* 1. Target the main content area of your pages */
+main, 
+section, 
+.main-content {
+  width: 90%;          /* Forces a natural 5% margin space on the left and right */
+  max-width: 1300px;   /* Matches the clean horizontal boundaries of your navbar */
+  margin: 0 auto;      /* Perfectly centers the content on laptop and desktop screens */
+  padding: 60px 0;     /* Adds uniform spacing below your sticky navbar and above your footer */
+  box-sizing: border-box;
+}
+
+/* 2. Fix the layout grid for your home/hero pages globally */
+.hero-section, 
+.home-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;           /* Ensures a clean, safe gap between text elements and images */
+}
+
+/* --- MOBILE & TABLET ADJUSTMENTS --- */
+@media (max-width: 992px) {
+  main, 
+  section, 
+  .main-content {
+    width: 92%;        /* Gives a little extra room for text on smaller screens */
+    padding: 40px 0;   /* Adjusts vertical spacing smoothly for mobile devices */
+  }
+  
+  /* Automatically stacks side-by-side elements vertically on phones */
+  .hero-section, 
+  .home-section {
+    flex-direction: column-reverse; 
+    text-align: center;
+    gap: 35px;
+  }
+}
+
+
   
