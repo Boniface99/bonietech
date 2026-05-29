@@ -62,7 +62,7 @@ nav {
 /* Make nav container full width without extra margins */
 nav .container {
   padding: 0;
-  max-width: 100%;
+  max-width: 200%;
 }
 
 /* Optional: Add a subtle glow effect to nav bar */
