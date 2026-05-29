@@ -39,38 +39,59 @@ main {
 
 
 /* 2. UPDATE YOUR NAV STYLES */
+/* THE NAVBAR WRAPPER (Stretches across the screen) */
 nav {
-  /* This forces the background to span the absolute full width of the screen */
-  width: 100vw; 
+  width: 100%;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 100;
-  
-  /* Centering the content wrapper */
   display: flex;
   justify-content: center; 
-  align-items: center;
-  padding: 20px 0; 
-  
-  /* Your styling remains intact */
+  padding: 20px 0;
   background: linear-gradient(135deg, rgba(5, 10, 20, 0.95) 0%, rgba(8, 15, 25, 0.98) 100%);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 224, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 224, 255, 0.1);
 }
 
-/* 3. YOUR INNER CONTAINER (Keeps logo left, links right) */
+/* THE INNER CONTAINER (Pushes logo left and links right) */
 nav .container {
-  width: 100%;
-  max-width: 1200px; /* Limits how far apart they spread on giant screens */
+  width: 90%;          /* Uses 90% of the screen width on laptops */
+  max-width: 1300px;    /* Prevents it from spreading too far on giant monitors */
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between; /* Pushes Logo to left, Links to right */
   align-items: center;
-  padding: 0 40px; /* Safe padding so things don't touch the literal glass edge */
-  box-sizing: border-box;
 }
-/* Optional: Add a subtle glow effect to nav bar */
+
+/* TARGET THE LINKS GROUP */
+nav .nav-links {
+  display: flex;
+  gap: 30px; /* This creates the breathing room/margins BETWEEN your text links */
+}
+
+/* TARGET THE INDIVIDUAL LINKS */
+nav .nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* --- MOBILE RESPONSIVENESS (Phones) --- */
+@media (max-width: 768px) {
+  nav .container {
+    width: 95%; /* Use more screen real estate on small phone screens */
+  }
+  
+  nav .nav-links {
+    gap: 15px; /* Shrink the space between links so they don't overflow on phones */
+  }
+  
+  /* Optional: If the links still crowd the logo on very small phones, 
+     uncomment the lines below to shrink the font size slightly */
+  /* nav .nav-links a { font-size: 14px; } */
+}
 nav::after {
   content: '';
   position: absolute;
